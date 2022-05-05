@@ -8,21 +8,24 @@ using TMPro;
 public class MenuManager : MonoBehaviour
 {
     [Header("Volume Settings")]
-    [SerializeField] private TMP_Text volumeText = null;
-    [SerializeField] private Slider volumeSlider = null;
-    [SerializeField] private float defaultVolume = 1f;
+    public TMP_Text volumeText = null;
+    public Slider volumeSlider = null;
+
+    private float defaultVolume = 1f;
 
     [Header("Graphic Settings")]
-    [SerializeField] private TMP_Text brightnessText = null;
-    [SerializeField] private Slider brightnessSlider = null;
-    [SerializeField] private int defaultBright = 4;
-    public int mainBright = 4;
+    public TMP_Text brightnessText = null;
+    public Slider brightnessSlider = null;
+
+    private float defaultBright = 1;
+    private bool isFullscreen;
+    private float brightnessLevel;
 
     [Header("Toggle Settings")]
-    [SerializeField] private Toggle fullscreenToggle = null;
+    public Toggle fullscreenToggle = null;
 
     [Header("Confirmation Pop-up")]
-    [SerializeField] private GameObject confirmationPop = null;
+    public GameObject confirmationPop = null;
 
     [Header("Put the new game scene string here")]
     public string newGame;
@@ -31,6 +34,12 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene(newGame);
     }
+
+    /*Bonus si on a le temps: ajout de scene pour d'autres niveaux
+
+    public void VolcanoSelect() { }
+    public void IcebergSelect() { }
+*/
 
     public void ExitBtn()
     {
@@ -45,28 +54,28 @@ public class MenuManager : MonoBehaviour
 
     public void VolumeApply()
     {
+        //PlayerPrefs pour sauvegarder les settings
         PlayerPrefs.SetFloat("masterVolume", AudioListener.volume);
-        //Confirmation Pop-up
         StartCoroutine(ConfirmationBox());
     }
 
     public void SetBrightness(float bright)
     {
-        mainBright = Mathf.RoundToInt(bright);
-        brightnessText.text = bright.ToString("0");
+        brightnessLevel = bright;
+        brightnessText.text = bright.ToString("0.0");
+        //Screen.brightness = brightnessLevel; -> marche seulement sur iOS malheureusement
+    }
+
+    public void SetFullscreen(bool isFullScrn)
+    {
+        isFullscreen = isFullScrn;
     }
 
     public void GraphicApply()
     {
-        if(fullscreenToggle.isOn)
-        {
-            //smt
-        }
-        else
-        {
-            //smt
-        }
-        //SetFloat
+        PlayerPrefs.SetFloat("masterBrightness", brightnessLevel);
+        PlayerPrefs.SetInt("masterFullscreen", isFullscreen ? 1 : 0);
+        Screen.fullScreen = isFullscreen;
         StartCoroutine(ConfirmationBox());
     }
 
@@ -82,14 +91,15 @@ public class MenuManager : MonoBehaviour
 
         if(MenuType == "Graphic")
         {
-            brightnessText.text = defaultBright.ToString("0");
+            brightnessText.text = defaultBright.ToString("0.0");
             brightnessSlider.value = defaultBright;
-            mainBright = defaultBright;
             fullscreenToggle.isOn = false;
+            Screen.fullScreen = false;
             GraphicApply();
         }
     }
 
+    //Pour faire attendre + saving logo
     public IEnumerator ConfirmationBox()
     {
         confirmationPop.SetActive(true);
