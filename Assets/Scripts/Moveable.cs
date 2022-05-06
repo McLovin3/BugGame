@@ -21,7 +21,7 @@ public class Moveable : MonoBehaviour
         if (!moved)
         {
             moved = true;
-            float randomiser = Random.Range(0, 1);
+            float randomiser = Random.Range(0f, 1f);
 
             if (randomiser > 0.25f)
             {
