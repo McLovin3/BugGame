@@ -19,7 +19,6 @@ public class PlayerInteraction : MonoBehaviour
         {
             isNearMoveable = true;
             moveable = other.gameObject.GetComponent<Moveable>();
-            Debug.Log(moveable);
         }
     }
 

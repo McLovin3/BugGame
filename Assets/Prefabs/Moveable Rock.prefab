@@ -136,3 +136,16 @@ MonoBehaviour:
   legendaryBug: {fileID: 0}
   moveAnimation: {fileID: 4338625871707268880}
   secondsToReset: 120
+--- !u!135 &129310780267644871
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945555456081399159}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
