@@ -24,7 +24,6 @@ public class PlayerMovement : MonoBehaviour
     {
         //Apply gravity
         controller.Move(Vector3.up * gravity * Time.deltaTime);
-
         CheckIfSprinting();
         Move();
     }
