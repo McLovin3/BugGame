@@ -103,6 +103,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5202732821079448320, guid: cebfacc247a640945a2c30b442202fca, type: 3}
   m_PrefabInstance: {fileID: 5995365938507732599}
   m_PrefabAsset: {fileID: 0}
+--- !u!135 &129310780267644871
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945555456081399159}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!111 &4338625871707268880
 Animation:
   m_ObjectHideFlags: 0
@@ -131,21 +144,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c1ae5e945cbf994fbc3d613d948a826, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commonBug: {fileID: 0}
-  rareBug: {fileID: 0}
-  legendaryBug: {fileID: 0}
+  commonBug: {fileID: 4678076191952411678, guid: 364748fa4dce0b547bce995c285e17b5, type: 3}
+  rareBug: {fileID: 174093810924452216, guid: f45dbbd4b010c98489567c887e9688d8, type: 3}
+  legendaryBug: {fileID: 6363687348336105446, guid: 3fb14b2c90df9ec4d8d04c7eb6813772, type: 3}
   moveAnimation: {fileID: 4338625871707268880}
   secondsToReset: 120
---- !u!135 &129310780267644871
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1945555456081399159}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
