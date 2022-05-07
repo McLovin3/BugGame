@@ -6,9 +6,10 @@ public class BugScript : MonoBehaviour
     public GameObject player;
     public CharacterController controller;
     public float movementSpeed = 2.5f;
-    public int value;
+    public int bugId = 1;
+    public int value = 0;
 
-    private UnityEvent<GameObject, int> bugCaught;
+    private UnityEvent<int, int> bugCaught = new UnityEvent<int, int>();
 
     private void Update()
     {
@@ -18,6 +19,7 @@ public class BugScript : MonoBehaviour
 
     public void Catch()
     {
-        bugCaught.Invoke(gameObject, value);
+        bugCaught.Invoke(bugId, value);
+        Destroy(gameObject);
     }
 }
