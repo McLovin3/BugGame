@@ -5,7 +5,6 @@ public class PlayerMovement : MonoBehaviour
     //Heavy help from https://www.youtube.com/watch?v=4HpC--2iowE&t=900s
 
     public CharacterController controller;
-    public Transform cameraTransform;
     public float gravity;
     public float movementSpeed;
     public float rotationTurnTime;
@@ -35,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
         if (direction != Vector3.zero)
         {
             //Finds the vector between x and z (Atan2), turns it into degrees and then add camera rotation to move with the camera
-            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y;
+            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + Camera.main.transform.eulerAngles.y;
             //Smoothens rotation change
             float playerAngle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref currentRotationVelocity, rotationTurnTime);
             transform.rotation = Quaternion.Euler(0f, playerAngle, 0f);

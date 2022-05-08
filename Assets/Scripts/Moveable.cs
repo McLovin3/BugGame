@@ -23,7 +23,7 @@ public class Moveable : MonoBehaviour
             moved = true;
             float randomiser = Random.Range(0f, 1f);
 
-            if (randomiser > 0.25f)
+            if (randomiser > 0.40f)
             {
                 Instantiate(commonBug, transform.position, Quaternion.identity);
 
