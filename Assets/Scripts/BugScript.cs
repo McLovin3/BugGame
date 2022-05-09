@@ -5,10 +5,11 @@ public class BugScript : MonoBehaviour
 {
     public CharacterController controller;
     public float movementSpeed = 2.5f;
+    public float moveWhenDistance = 10f;
     public int bugId = 1;
     public int value = 0;
 
-    private UnityEvent<int, int> bugCaught = new UnityEvent<int, int>();
+    public UnityEvent<int, int> bugCaught;
     private GameObject player;
 
     private void Start()
@@ -18,9 +19,12 @@ public class BugScript : MonoBehaviour
 
     private void Update()
     {
-        Vector3 direction = player.transform.position - transform.position;
-        direction.y = 0;
-        controller.Move(direction.normalized * Time.deltaTime * -movementSpeed);
+        if (Vector3.Distance(player.transform.position, transform.position) <= moveWhenDistance)
+        {
+            Vector3 direction = player.transform.position - transform.position;
+            direction.y = 0;
+            controller.Move(direction.normalized * Time.deltaTime * -movementSpeed);
+        }
     }
 
     public void Catch()

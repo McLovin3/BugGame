@@ -48,9 +48,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 7903188506033276778}
-  movementSpeed: 2.5
+  movementSpeed: 2
+  moveWhenDistance: 5
   bugId: 2
   value: 200
+  bugCaught:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!143 &7903188506033276778
 CharacterController:
   m_ObjectHideFlags: 0
