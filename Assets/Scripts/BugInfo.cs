@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class BugInfo : MonoBehaviour
 {
+    [Header("Enter bug info down here")]
     public int idNumber;
     public int moneyValue = 0;
     public int numberCaught = 0;
     public string bugName;
+
+    [Header("Place checkmark child here")]
     public GameObject checkMark;
 
     private void Start()
@@ -17,6 +20,7 @@ public class BugInfo : MonoBehaviour
 
     public void isCaught()
     {
-        checkMark.SetActive(true);
+        if(checkMark.activeSelf == false)
+            checkMark.SetActive(true);
     }
 }
