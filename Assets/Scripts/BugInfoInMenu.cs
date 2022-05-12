@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BugInfo : MonoBehaviour
+public class BugInfoInMenu : MonoBehaviour
 {
     [Header("Enter bug info down here")]
     public int idNumber;

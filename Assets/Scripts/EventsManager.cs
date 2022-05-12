@@ -9,21 +9,30 @@ public class EventsManager : MonoBehaviour
     public static EventsManager current;
     public List<GameObject> allBugs;
 
+    public int id;
+
     private void Awake()
     {
         current = this;
     }
 
-    private void onBugCaught(int bugId, int value)
+    public void registerBug(int bugId)
     {
-        for(int i = 0; i < allBugs.Count; i++)
+        for (int i = 0; i < allBugs.Count; i++)
         {
-            if(allBugs[i].GetComponent<BugInfo>().idNumber == bugId)
+            if (allBugs[i].GetComponent<BugInfoInMenu>().idNumber == bugId)
             {
-                allBugs[i].GetComponent<BugInfo>().isCaught();
-                allBugs[i].GetComponent<BugInfo>().moneyValue = value;
-                allBugs[i].GetComponent<BugInfo>().numberCaught++;
+                allBugs[i].GetComponent<BugInfoInMenu>().isCaught();
+                allBugs[i].GetComponent<BugInfoInMenu>().numberCaught++;
             }
         }
+    }
+
+
+    public event Action<int> onBugCaught;
+    public void BugCaught(int id)
+    {
+        if (onBugCaught != null)
+            onBugCaught(id);
     }
 }
