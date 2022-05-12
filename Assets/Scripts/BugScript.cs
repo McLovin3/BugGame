@@ -9,8 +9,9 @@ public class BugScript : MonoBehaviour
     public int bugId = 1;
     public int value = 0;
 
-    public UnityEvent<int, int> bugCaught;
+    public UnityEvent<int, int> onBugCaught;
     private GameObject player;
+    public EventsManager eventsManager;
 
     private void Start()
     {
@@ -29,7 +30,7 @@ public class BugScript : MonoBehaviour
 
     public void Catch()
     {
-        bugCaught.Invoke(bugId, value);
+        onBugCaught.Invoke(bugId, value);
         Destroy(gameObject);
     }
 }
