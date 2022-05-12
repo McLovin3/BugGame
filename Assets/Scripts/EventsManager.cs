@@ -18,7 +18,12 @@ public class EventsManager : MonoBehaviour
     {
         for(int i = 0; i < allBugs.Count; i++)
         {
-            
+            if(allBugs[i].GetComponent<BugInfo>().idNumber == bugId)
+            {
+                allBugs[i].GetComponent<BugInfo>().isCaught();
+                allBugs[i].GetComponent<BugInfo>().moneyValue = value;
+                allBugs[i].GetComponent<BugInfo>().numberCaught++;
+            }
         }
     }
 }
