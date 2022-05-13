@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class BugScript : MonoBehaviour
 {
@@ -33,7 +30,7 @@ public class BugScript : MonoBehaviour
 
     private void onBugCaughtRegister(int id)
     {
-        if(id == bugId)
+        if (id == bugId)
         {
             EventsManager.current.registerBug(bugId);
             Destroy(gameObject);

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BugInfoInMenu : MonoBehaviour
@@ -20,7 +18,7 @@ public class BugInfoInMenu : MonoBehaviour
 
     public void isCaught()
     {
-        if(checkMark.activeSelf == false)
+        if (checkMark.activeSelf == false)
             checkMark.SetActive(true);
     }
 }

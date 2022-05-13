@@ -53,10 +53,6 @@ MonoBehaviour:
   gravity: 9.81
   bugId: 1
   value: 100
-  onBugCaught:
-    m_PersistentCalls:
-      m_Calls: []
-  eventsManager: {fileID: 0}
 --- !u!143 &8890440398230691145
 CharacterController:
   m_ObjectHideFlags: 0
@@ -72,7 +68,7 @@ CharacterController:
   m_Radius: 0.05
   m_SlopeLimit: 45
   m_StepOffset: 0.2
-  m_SkinWidth: 0.01
+  m_SkinWidth: 0.001
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &6391203440607058661

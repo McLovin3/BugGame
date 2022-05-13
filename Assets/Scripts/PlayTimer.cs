@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
@@ -11,8 +10,8 @@ public class PlayTimer : MonoBehaviour
     public TMP_Text timeCounter;
 
     private double timeSpent;
-    private TimeSpan playTime; //intervalle (déjà formattée) de temps entre 2 temps
-    private bool timeGoing = false; //si jamais on arrête le temps
+    private TimeSpan playTime; //intervalle (dï¿½jï¿½ formattï¿½e) de temps entre 2 temps
+    private bool timeGoing = false; //si jamais on arrï¿½te le temps
 
 
     // Start is called before the first frame update
@@ -26,15 +25,15 @@ public class PlayTimer : MonoBehaviour
     {
         timeGoing = true;
         timeSpent = 0;
-        StartCoroutine(UpdateTime()); 
+        StartCoroutine(UpdateTime());
     }
 
     //Coroutine qui permet de faire avancer le temps
     private IEnumerator UpdateTime()
     {
-        while(timeGoing)
+        while (timeGoing)
         {
-            timeSpent += Time.unscaledDeltaTime; //pour ignorer le timeScale à 0 quand le jeu est en pause
+            timeSpent += Time.unscaledDeltaTime; //pour ignorer le timeScale ï¿½ 0 quand le jeu est en pause
             playTime = TimeSpan.FromSeconds(timeSpent);
             timeCounter.text = playTime.ToString(@"hh\:mm\:ss");
             yield return null;

@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class TabSystem : MonoBehaviour
 {
@@ -14,7 +12,7 @@ public class TabSystem : MonoBehaviour
 
     public void AddTab(TabButton button)
     {
-        if(buttonsList == null)
+        if (buttonsList == null)
         {
             buttonsList = new List<TabButton>();
         }
@@ -25,7 +23,7 @@ public class TabSystem : MonoBehaviour
     public void onTabEnter(TabButton button)
     {
         ResetAllTabs();
-        if(pressedTab == null || button != pressedTab)
+        if (pressedTab == null || button != pressedTab)
         {
             button.img.sprite = btnHover;
         }
@@ -45,7 +43,7 @@ public class TabSystem : MonoBehaviour
 
         //Changera la page selon l'index
         int index = button.transform.GetSiblingIndex(); //Attention! Il faut garder l'ordre des bouttons et des pages en compte
-        for(int i = 0; i < pageList.Count; i++)
+        for (int i = 0; i < pageList.Count; i++)
         {
             if (i == index)
                 pageList[i].SetActive(true);
@@ -56,10 +54,10 @@ public class TabSystem : MonoBehaviour
 
     public void ResetAllTabs()
     {
-        foreach(TabButton button in buttonsList)
+        foreach (TabButton button in buttonsList)
         {
-            if(pressedTab != null && pressedTab == button) 
-            { 
+            if (pressedTab != null && pressedTab == button)
+            {
                 continue;
             }
             button.img.sprite = btnIdle;

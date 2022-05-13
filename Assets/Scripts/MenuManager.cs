@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -89,7 +88,7 @@ public class MenuManager : MonoBehaviour
             VolumeApply();
         }
 
-        if(MenuType == "Graphic")
+        if (MenuType == "Graphic")
         {
             brightnessText.text = defaultBright.ToString("0.0");
             brightnessSlider.value = defaultBright;
