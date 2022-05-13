@@ -17,7 +17,7 @@ public class PlayerInteraction : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            //player animation
+            //TODO Add player animation
             if (isNearBug)
             {
                 EventsManager.current.BugCaught(bug.bugId);

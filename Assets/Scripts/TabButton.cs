@@ -8,6 +8,12 @@ public class TabButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
     public TabSystem tabSystem;
     public Image img;
 
+    void Start()
+    {
+        img = GetComponent<Image>();
+        tabSystem.AddTab(this);
+    }
+
     public void OnPointerClick(PointerEventData eventData)
     {
         tabSystem.onTabPressed(this);
@@ -21,18 +27,5 @@ public class TabButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
     public void OnPointerExit(PointerEventData eventData)
     {
         tabSystem.onTabExit(this);
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        img = GetComponent<Image>();
-        tabSystem.AddTab(this);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
