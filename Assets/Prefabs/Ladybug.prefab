@@ -50,7 +50,6 @@ MonoBehaviour:
   controller: {fileID: 8890440398230691145}
   movementSpeed: 2
   moveWhenDistance: 5
-  gravity: 9.81
   bugId: 1
   value: 100
 --- !u!143 &8890440398230691145
@@ -64,10 +63,10 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 0.2
-  m_Radius: 0.05
+  m_Height: 0.02
+  m_Radius: 0.02
   m_SlopeLimit: 45
-  m_StepOffset: 0.2
+  m_StepOffset: 0.001
   m_SkinWidth: 0.001
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
@@ -117,7 +116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8b59bd887a27aa744a04e122c6993f11, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.025
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8b59bd887a27aa744a04e122c6993f11, type: 3}
       propertyPath: m_LocalRotation.w

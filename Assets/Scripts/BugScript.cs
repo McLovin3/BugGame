@@ -1,5 +1,7 @@
 using UnityEngine;
 
+//TODO CHANGE IDS TO INHERITANCE
+//Disappear after while
 public class BugScript : MonoBehaviour
 {
     public CharacterController controller;
@@ -23,8 +25,9 @@ public class BugScript : MonoBehaviour
         if (Vector3.Distance(player.transform.position, transform.position) <= moveWhenDistance)
         {
             Vector3 direction = player.transform.position - transform.position;
-            direction.y -= 0;
+            transform.rotation = Quaternion.Euler(Vector3.up * Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg);
             controller.Move(direction.normalized * Time.deltaTime * -movementSpeed);
+            controller.Move(Vector3.down * gravity * Time.deltaTime);
         }
     }
 
@@ -33,6 +36,7 @@ public class BugScript : MonoBehaviour
         if (id == bugId)
         {
             EventsManager.current.registerBug(bugId);
+            EventsManager.current.onBugCaught -= onBugCaughtRegister;
             Destroy(gameObject);
         }
     }

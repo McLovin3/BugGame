@@ -26,7 +26,6 @@ public class EventsManager : MonoBehaviour
         }
     }
 
-
     public event Action<int> onBugCaught;
     public void BugCaught(int id)
     {
