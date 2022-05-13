@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,12 +12,12 @@ public class BugScript : MonoBehaviour
     public int bugId = 1;
     public int value = 0;
 
-    public UnityEvent<int, int> onBugCaught;
+    //public UnityEvent<int, int> onBugCaught;
     private GameObject player;
-    public EventsManager eventsManager;
 
     private void Start()
     {
+        EventsManager.current.onBugCaught += onBugCaughtRegister;
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -29,9 +31,12 @@ public class BugScript : MonoBehaviour
         }
     }
 
-    public void Catch()
+    private void onBugCaughtRegister(int id)
     {
-        onBugCaught.Invoke(bugId, value);
-        Destroy(gameObject);
+        if(id == bugId)
+        {
+            EventsManager.current.registerBug(bugId);
+            Destroy(gameObject);
+        }
     }
 }

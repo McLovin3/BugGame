@@ -20,7 +20,7 @@ public class PlayerInteraction : MonoBehaviour
             //player animation
             if (isNearBug)
             {
-                bug.Catch();
+                EventsManager.current.BugCaught(bug.bugId);
                 isNearBug = false;
                 bug = null;
             }
