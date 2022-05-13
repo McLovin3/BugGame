@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 121433892817878878}
-  gravity: -9.81
+  gravity: 9.81
   movementSpeed: 2.5
   rotationTurnTime: 0.1
   sprintSpeedMultiplier: 2.5

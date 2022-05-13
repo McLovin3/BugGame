@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         //Apply gravity
-        controller.Move(Vector3.up * gravity * Time.deltaTime);
+        controller.Move(Vector3.down * gravity * Time.deltaTime);
         CheckIfSprinting();
         Move();
     }
