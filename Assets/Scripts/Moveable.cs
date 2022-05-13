@@ -21,21 +21,21 @@ public class Moveable : MonoBehaviour
         if (!moved)
         {
             moved = true;
-            float randomiser = Random.Range(0f, 1f);
+            float randomNumber = Random.Range(0f, 1f);
 
-            if (randomiser > 0.40f)
+            if (randomNumber > 0.90f)
             {
-                Instantiate(commonBug, transform.position, Quaternion.identity);
-
+                Instantiate(legendaryBug, transform.position, Quaternion.identity);
             }
-            else if (randomiser > 0.75f)
+            else if (randomNumber > 0.75f)
             {
                 Instantiate(rareBug, transform.position, Quaternion.identity);
 
             }
-            else if (randomiser > 0.90f)
+            else if (randomNumber > 0.40f)
             {
-                Instantiate(legendaryBug, transform.position, Quaternion.identity);
+                Instantiate(commonBug, transform.position, Quaternion.identity);
+
             }
 
             moveAnimation.Play();
@@ -45,6 +45,7 @@ public class Moveable : MonoBehaviour
 
     private void ResetMovement()
     {
+        moveAnimation.Stop();
         transform.position = initPosition;
         moved = false;
     }
