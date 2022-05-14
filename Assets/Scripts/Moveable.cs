@@ -30,12 +30,10 @@ public class Moveable : MonoBehaviour
             else if (randomNumber > 0.75f)
             {
                 Instantiate(rareBug, transform.position, Quaternion.identity);
-
             }
             else if (randomNumber > 0.40f)
             {
                 Instantiate(commonBug, transform.position, Quaternion.identity);
-
             }
 
             moveAnimation.Play();

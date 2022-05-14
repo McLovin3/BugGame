@@ -27,6 +27,7 @@ public class BugScript : MonoBehaviour
             Vector3 direction = player.transform.position - transform.position;
             //Get direction between x and y and rotates to that position
             transform.rotation = Quaternion.Euler(Vector3.up * Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg);
+            direction.y = 0;
             controller.Move(direction.normalized * Time.deltaTime * -movementSpeed);
             controller.Move(Vector3.down * gravity * Time.deltaTime);
         }
