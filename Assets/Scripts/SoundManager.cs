@@ -10,6 +10,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource backgroundMusic;
     public AudioSource btnEnterSfx;
     public AudioSource btnSelectSfx;
+    public AudioSource openMenuSfx;
     public AudioSource closeMenuSfx;
     public AudioSource applySfx;
 

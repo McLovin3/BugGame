@@ -2,32 +2,29 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-[RequireComponent(typeof(Image))]
-public class TabButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, IPointerExitHandler
+public class UI_Button : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, IPointerExitHandler
 {
-    public TabSystem tabSystem;
-    public Image img;
+    public UI_System menuSys;
 
     void Start()
     {
-        img = GetComponent<Image>();
-        tabSystem.AddTab(this);
+        menuSys.AddUIbutton(this);
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
         SoundManager.current.PlaySFX(SoundManager.current.btnSelectSfx);
-        tabSystem.onTabPressed(this);
+        menuSys.onUIbtnPressed(this);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         SoundManager.current.PlaySFX(SoundManager.current.btnEnterSfx);
-        tabSystem.onTabEnter(this);
+        menuSys.onUIbtnEnter(this);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        tabSystem.onTabExit(this);
+        menuSys.onUIbtnExit(this);
     }
 }

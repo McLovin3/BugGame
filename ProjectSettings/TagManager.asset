@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Moveable
   - Bug
+  - Tab
+  - MMbutton
   layers:
   - Default
   - TransparentFX

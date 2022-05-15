@@ -106,6 +106,8 @@ public class MenuManager : MonoBehaviour
     //Pour faire attendre + saving logo
     public IEnumerator ConfirmationBox()
     {
+        yield return new WaitForSeconds(0.5f);
+        SoundManager.current.PlaySFX(SoundManager.current.applySfx);
         confirmationPop.SetActive(true);
         yield return new WaitForSeconds(1.5f);
         confirmationPop.SetActive(false);

@@ -18,12 +18,14 @@ public class PauseGame : MonoBehaviour
             {
                 //Pause
                 Time.timeScale = 0f;
+                SoundManager.current.PlaySFX(SoundManager.current.openMenuSfx);
                 ExplorerBagMenu.SetActive(true);
                 isPaused = true;
             }
             else
             {
                 //Resume
+                SoundManager.current.PlaySFX(SoundManager.current.closeMenuSfx);
                 ExplorerBagMenu.SetActive(false);
                 Time.timeScale = 1f;
                 isPaused = false;
