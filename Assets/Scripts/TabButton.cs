@@ -16,11 +16,13 @@ public class TabButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        SoundManager.current.PlaySFX(SoundManager.current.btnSelectSfx);
         tabSystem.onTabPressed(this);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        SoundManager.current.PlaySFX(SoundManager.current.btnEnterSfx);
         tabSystem.onTabEnter(this);
     }
 

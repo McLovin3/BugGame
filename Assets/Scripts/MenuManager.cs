@@ -29,6 +29,11 @@ public class MenuManager : MonoBehaviour
     [Header("Put the new game scene string here")]
     public string newGame;
 
+    public void Start()
+    {
+        SoundManager.current.PlayMusic(SoundManager.current.backgroundMusic);
+    }
+
     public void NewGameYes()
     {
         SceneManager.LoadScene(newGame);
