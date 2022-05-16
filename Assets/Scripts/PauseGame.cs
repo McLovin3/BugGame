@@ -5,6 +5,12 @@ public class PauseGame : MonoBehaviour
     public GameObject ExplorerBagMenu;
     private bool isPaused = false;
 
+    void Start()
+    {
+        Cursor.visible = false;
+    }
+
+
     void Update()
     {
         toPause();
@@ -14,6 +20,7 @@ public class PauseGame : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {
+            Cursor.visible = !Cursor.visible;
             if (!isPaused)
             {
                 //Pause
