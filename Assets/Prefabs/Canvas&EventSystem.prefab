@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Interact :'
+  m_text: "Int\xE9ragir :"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 46ce7f5fa1469ee4e8514b96f2301a08, type: 2}
   m_sharedMaterial: {fileID: -3930335367466183209, guid: 46ce7f5fa1469ee4e8514b96f2301a08, type: 2}
@@ -336,7 +336,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Camera Movement :'
+  m_text: "Mouvement de la cam\xE9ra :"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 46ce7f5fa1469ee4e8514b96f2301a08, type: 2}
   m_sharedMaterial: {fileID: -3930335367466183209, guid: 46ce7f5fa1469ee4e8514b96f2301a08, type: 2}
@@ -498,14 +498,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonsList: []
-  pressedTab: {fileID: 0}
-  btnIdle: {fileID: 21300000, guid: 0b38499b4eb144149930bb66bcf69cdb, type: 3}
-  btnHover: {fileID: 21300000, guid: bd137acd66d2ef34a94ee887d9269cb1, type: 3}
-  btnPressed: {fileID: 21300000, guid: 0207dae759e498c4abb19b67e3251534, type: 3}
   pageList:
   - {fileID: 9123761826392264607}
   - {fileID: 1272107216061367734}
   - {fileID: 1998303773165884167}
+  pressedTab: {fileID: 0}
+  btnIdle: {fileID: 21300000, guid: 0b38499b4eb144149930bb66bcf69cdb, type: 3}
+  btnHover: {fileID: 21300000, guid: bd137acd66d2ef34a94ee887d9269cb1, type: 3}
+  btnPressed: {fileID: 21300000, guid: 0207dae759e498c4abb19b67e3251534, type: 3}
+  textUIcolor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1036757476125902842
 GameObject:
   m_ObjectHideFlags: 0
@@ -817,8 +818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a402a028b2415d641a15f21d734994cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tabSystem: {fileID: 2156770161610381210}
-  img: {fileID: 0}
+  menuSys: {fileID: 0}
 --- !u!1 &1998303773165884167
 GameObject:
   m_ObjectHideFlags: 0
@@ -1145,7 +1145,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Camera Zoom :'
+  m_text: "Zoome de la cam\xE9ra :"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 46ce7f5fa1469ee4e8514b96f2301a08, type: 2}
   m_sharedMaterial: {fileID: -3930335367466183209, guid: 46ce7f5fa1469ee4e8514b96f2301a08, type: 2}
@@ -1280,7 +1280,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Bugs Caught :'
+  m_text: "insectes attrap\xE9s :"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 46ce7f5fa1469ee4e8514b96f2301a08, type: 2}
   m_sharedMaterial: {fileID: -3930335367466183209, guid: 46ce7f5fa1469ee4e8514b96f2301a08, type: 2}
@@ -1491,7 +1491,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Pause/Explorer Bag :'
+  m_text: "Menu/Sac \xE0 dos :"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 46ce7f5fa1469ee4e8514b96f2301a08, type: 2}
   m_sharedMaterial: {fileID: -3930335367466183209, guid: 46ce7f5fa1469ee4e8514b96f2301a08, type: 2}
@@ -1626,7 +1626,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Escape
+  m_text: Esc
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 46ce7f5fa1469ee4e8514b96f2301a08, type: 2}
   m_sharedMaterial: {fileID: -3930335367466183209, guid: 46ce7f5fa1469ee4e8514b96f2301a08, type: 2}
@@ -1712,7 +1712,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1066661280681751845
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1761,7 +1761,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'S-Rank Bugs Found :'
+  m_text: 'Insectes :'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 46ce7f5fa1469ee4e8514b96f2301a08, type: 2}
   m_sharedMaterial: {fileID: -3930335367466183209, guid: 46ce7f5fa1469ee4e8514b96f2301a08, type: 2}
@@ -1896,7 +1896,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: MouseAxis
+  m_text: Souris
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 46ce7f5fa1469ee4e8514b96f2301a08, type: 2}
   m_sharedMaterial: {fileID: -3930335367466183209, guid: 46ce7f5fa1469ee4e8514b96f2301a08, type: 2}
@@ -2166,7 +2166,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Time Played :'
+  m_text: "Temps jou\xE9 :"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 46ce7f5fa1469ee4e8514b96f2301a08, type: 2}
   m_sharedMaterial: {fileID: -3930335367466183209, guid: 46ce7f5fa1469ee4e8514b96f2301a08, type: 2}
@@ -3069,7 +3069,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Levels Unlocked :'
+  m_text: "Niveaux d\xE9bloqu\xE9s :"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 46ce7f5fa1469ee4e8514b96f2301a08, type: 2}
   m_sharedMaterial: {fileID: -3930335367466183209, guid: 46ce7f5fa1469ee4e8514b96f2301a08, type: 2}
@@ -3204,7 +3204,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: MouseWheel
+  m_text: Roulette de la souris
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 46ce7f5fa1469ee4e8514b96f2301a08, type: 2}
   m_sharedMaterial: {fileID: -3930335367466183209, guid: 46ce7f5fa1469ee4e8514b96f2301a08, type: 2}
@@ -3442,8 +3442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a402a028b2415d641a15f21d734994cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tabSystem: {fileID: 2156770161610381210}
-  img: {fileID: 0}
+  menuSys: {fileID: 0}
 --- !u!1 &6899021865754553846
 GameObject:
   m_ObjectHideFlags: 0
@@ -3510,7 +3509,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LShift
+  m_text: Shift Gauche
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 46ce7f5fa1469ee4e8514b96f2301a08, type: 2}
   m_sharedMaterial: {fileID: -3930335367466183209, guid: 46ce7f5fa1469ee4e8514b96f2301a08, type: 2}
@@ -3985,7 +3984,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Movement :'
+  m_text: 'Mouvement :'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 46ce7f5fa1469ee4e8514b96f2301a08, type: 2}
   m_sharedMaterial: {fileID: -3930335367466183209, guid: 46ce7f5fa1469ee4e8514b96f2301a08, type: 2}
@@ -4261,7 +4260,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6588362586062839622
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4445,7 +4444,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Explorer Bag
+  m_text: "Sac \xE0 dos"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 46ce7f5fa1469ee4e8514b96f2301a08, type: 2}
   m_sharedMaterial: {fileID: -3930335367466183209, guid: 46ce7f5fa1469ee4e8514b96f2301a08, type: 2}
@@ -4682,8 +4681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a402a028b2415d641a15f21d734994cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tabSystem: {fileID: 2156770161610381210}
-  img: {fileID: 0}
+  menuSys: {fileID: 0}
 --- !u!1 &9123761826392264607
 GameObject:
   m_ObjectHideFlags: 0
