@@ -10,7 +10,6 @@ public class PauseGame : MonoBehaviour
         Cursor.visible = false;
     }
 
-
     void Update()
     {
         toPause();

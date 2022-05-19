@@ -38,8 +38,7 @@ public class BugScript : MonoBehaviour
         if (id == bugId)
         {
             EventsManager.current.registerBug(bugId);
-            EventsManager.current.onBugCaught -= onBugCaughtRegister;
-            Destroy(gameObject);
+            DestroyBug();
         }
     }
 
