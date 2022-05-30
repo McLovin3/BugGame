@@ -4,6 +4,7 @@ public class PlayerMovement : MonoBehaviour
 {
     //Heavy help from https://www.youtube.com/watch?v=4HpC--2iowE&t=900s
 
+    public Animator animator;
     public CharacterController controller;
     public float gravity;
     public float movementSpeed;
@@ -42,14 +43,22 @@ public class PlayerMovement : MonoBehaviour
             //Turns rotation into x and z
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(moveDir.normalized * Time.deltaTime * currentMovementSpeed);
+            animator.SetFloat("speed", currentMovementSpeed);
+        }
+        else
+        {
+            animator.SetFloat("speed", 0);
         }
     }
 
     private void CheckIfSprinting()
     {
-        if (Input.GetKey(KeyCode.LeftShift) && !sprinting)
+        if (Input.GetKey(KeyCode.LeftShift))
         {
-            currentMovementSpeed *= sprintSpeedMultiplier;
+            if (!sprinting)
+            {
+                currentMovementSpeed *= sprintSpeedMultiplier;
+            }
             sprinting = true;
         }
         else

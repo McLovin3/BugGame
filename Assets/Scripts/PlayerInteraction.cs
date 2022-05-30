@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
 {
+    public Animator animator;
     private bool isNearMoveable = false;
     private Moveable moveable;
 
@@ -17,7 +18,8 @@ public class PlayerInteraction : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            //TODO Add player animation
+            animator.SetBool("isPickup", true);
+            Invoke("StopPickup", 1);
             if (isNearBug)
             {
                 EventsManager.current.BugCaught(bug.bugId);
@@ -25,6 +27,11 @@ public class PlayerInteraction : MonoBehaviour
                 bug = null;
             }
         }
+    }
+
+    void StopPickup()
+    {
+        animator.SetBool("isPickup", false);
     }
 
     void OnTriggerEnter(Collider other)
