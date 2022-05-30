@@ -151,10 +151,14 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 306349d9eb14251448077edd35a05c77, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b22f8cdb547d74b4c96f274e5e83b4aa, type: 2}
+      objectReference: {fileID: 2100000, guid: 6178af3cf479d494596d0ad826f2f0d2, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 306349d9eb14251448077edd35a05c77, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 6548018497598935282, guid: 1a77108d949e74f46b01494c1cec04e3, type: 3}
     - target: {fileID: 919132149155446097, guid: 306349d9eb14251448077edd35a05c77, type: 3}
       propertyPath: m_Name
-      value: Butterfly
+      value: Dragonfly
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 306349d9eb14251448077edd35a05c77, type: 3}
